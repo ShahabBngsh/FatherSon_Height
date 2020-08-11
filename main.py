@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as mpl
 #read file, separated by tab
 #NOTE: if there is no header you can try header=None
+#dataset by carl Pearson
 data = pd.read_csv("E:\Courses\LocalRepo\FatherSon_Height\Pearson.txt", sep='\t')
 #extract column wise data
 x = data.iloc[:, 0]
