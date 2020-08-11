@@ -1,5 +1,7 @@
 #data manipulation library
 import pandas as pd
+#for data visualisation
+import matplotlib.pyplot as mpl
 #read file, separated by tab
 #NOTE: if there is no header you can try header=None
 data = pd.read_csv("E:\Courses\LocalRepo\FatherSon_Height\Pearson.txt", sep='\t')
@@ -7,4 +9,12 @@ data = pd.read_csv("E:\Courses\LocalRepo\FatherSon_Height\Pearson.txt", sep='\t'
 x = data.iloc[:, 0]
 y = data.iloc[:, 1]
 
-print(y)
+#scatter plot using pyplot from matplotlib
+fig = mpl.figure()
+mpl.scatter(x, y)
+mpl.xlim(58, 79)
+mpl.ylim(58, 79)
+mpl.xlabel("Father's Height")
+mpl.ylabel("Son's Height")
+mpl.title("Scatter Plot")
+mpl.show()
